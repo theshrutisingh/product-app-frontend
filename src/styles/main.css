@@ -1,0 +1,141 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color); /* Use CSS variable for bg color */
+  transition: background-color 0.3s ease;
+}
+
+/* Example variables for light/dark mode */
+:root {
+  --bg-color: #fff; /* light background */
+  --text-color: #000;
+}
+
+body.dark-theme {
+  --bg-color: #121212; /* dark background */
+  --text-color: #e0e0e0;
+}
+
+/* If you want your main wrapper to stretch full width */
+#root, .app-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+}
+
+.container.dark {
+  background-color: #181818;
+  color: #f0f0f0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background-color: #0056b3;
+}
+
+.icon-btn.delete {
+  background-color: #dc3545;
+}
+
+.icon-btn.delete:hover {
+  background-color: #b02a37;
+}
+
+.icon-btn.edit {
+  background-color: #17a2b8;
+}
+
+.icon-btn.edit:hover {
+  background-color: #117a8b;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.container.dark .product-card {
+  background-color: #242424;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #007bff;
+}
+
+.container.dark .price {
+  color: #66b3ff;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
